@@ -1,0 +1,282 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: hsl(220 20% 97%);
+  --color-foreground: hsl(220 25% 10%);
+
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(220 25% 10%);
+
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(220 25% 10%);
+
+  --color-primary: hsl(0 85% 50%);
+  --color-primary-foreground: hsl(0 0% 100%);
+
+  --color-secondary: hsl(45 100% 55%);
+  --color-secondary-foreground: hsl(220 25% 10%);
+
+  --color-muted: hsl(220 15% 92%);
+  --color-muted-foreground: hsl(220 10% 45%);
+
+  --color-accent: hsl(200 90% 50%);
+  --color-accent-foreground: hsl(0 0% 100%);
+
+  --color-destructive: hsl(0 84.2% 60.2%);
+  --color-destructive-foreground: hsl(210 40% 98%);
+
+  --color-border: hsl(220 15% 88%);
+  --color-input: hsl(220 15% 88%);
+  --color-ring: hsl(0 85% 50%);
+
+  --radius: 1rem;
+
+  --font-display: "Fredoka", sans-serif;
+  --font-body: "Space Grotesk", sans-serif;
+
+  /* Pokemon Type Colors */
+  --color-type-normal: hsl(168 12% 50%);
+  --color-type-fire: hsl(25 100% 55%);
+  --color-type-water: hsl(220 90% 55%);
+  --color-type-electric: hsl(48 100% 50%);
+  --color-type-grass: hsl(100 60% 45%);
+  --color-type-ice: hsl(180 60% 70%);
+  --color-type-fighting: hsl(0 70% 45%);
+  --color-type-poison: hsl(280 60% 50%);
+  --color-type-ground: hsl(35 55% 50%);
+  --color-type-flying: hsl(255 80% 75%);
+  --color-type-psychic: hsl(340 90% 60%);
+  --color-type-bug: hsl(75 70% 40%);
+  --color-type-rock: hsl(45 40% 40%);
+  --color-type-ghost: hsl(265 40% 45%);
+  --color-type-dragon: hsl(260 90% 55%);
+  --color-type-dark: hsl(240 10% 25%);
+  --color-type-steel: hsl(220 15% 65%);
+  --color-type-fairy: hsl(330 70% 75%);
+
+  /* Pokemon Background Colors for Tailwind classes */
+  --color-pokemon-normal: var(--color-type-normal);
+  --color-pokemon-fire: var(--color-type-fire);
+  --color-pokemon-water: var(--color-type-water);
+  --color-pokemon-electric: var(--color-type-electric);
+  --color-pokemon-grass: var(--color-type-grass);
+  --color-pokemon-ice: var(--color-type-ice);
+  --color-pokemon-fighting: var(--color-type-fighting);
+  --color-pokemon-poison: var(--color-type-poison);
+  --color-pokemon-ground: var(--color-type-ground);
+  --color-pokemon-flying: var(--color-type-flying);
+  --color-pokemon-psychic: var(--color-type-psychic);
+  --color-pokemon-bug: var(--color-type-bug);
+  --color-pokemon-rock: var(--color-type-rock);
+  --color-pokemon-ghost: var(--color-type-ghost);
+  --color-pokemon-dragon: var(--color-type-dragon);
+  --color-pokemon-dark: var(--color-type-dark);
+  --color-pokemon-steel: var(--color-type-steel);
+  --color-pokemon-fairy: var(--color-type-fairy);
+
+  --color-sidebar-background: hsl(0 0% 98%);
+  --color-sidebar-foreground: hsl(240 5.3% 26.1%);
+  --color-sidebar-primary: hsl(240 5.9% 10%);
+  --color-sidebar-primary-foreground: hsl(0 0% 98%);
+  --color-sidebar-accent: hsl(240 4.8% 95.9%);
+  --color-sidebar-accent-foreground: hsl(240 5.9% 10%);
+  --color-sidebar-border: hsl(220 13% 91%);
+  --color-sidebar-ring: hsl(217.2 91.2% 59.8%);
+}
+
+:root {
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg,
+      hsl(0 85% 50%) 0%,
+      hsl(25 100% 55%) 50%,
+      hsl(45 100% 55%) 100%);
+  --gradient-card: linear-gradient(180deg,
+      hsl(0 0% 100% / 0.9) 0%,
+      hsl(0 0% 100% / 0.7) 100%);
+
+  /* Shadows */
+  --shadow-card: 0 4px 20px -4px hsl(220 25% 10% / 0.1);
+  --shadow-card-hover: 0 12px 40px -8px hsl(220 25% 10% / 0.2);
+  --shadow-pokeball: 0 8px 30px -4px hsl(0 85% 50% / 0.3);
+}
+
+.dark {
+  --color-background: hsl(220 25% 8%);
+  --color-foreground: hsl(220 15% 95%);
+
+  --color-card: hsl(220 25% 12%);
+  --color-card-foreground: hsl(220 15% 95%);
+
+  --color-popover: hsl(220 25% 12%);
+  --color-popover-foreground: hsl(220 15% 95%);
+
+  --color-primary: hsl(0 85% 55%);
+  --color-primary-foreground: hsl(0 0% 100%);
+
+  --color-secondary: hsl(45 100% 50%);
+  --color-secondary-foreground: hsl(220 25% 10%);
+
+  --color-muted: hsl(220 20% 18%);
+  --color-muted-foreground: hsl(220 10% 60%);
+
+  --color-accent: hsl(200 90% 55%);
+  --color-accent-foreground: hsl(0 0% 100%);
+
+  --color-destructive: hsl(0 62.8% 30.6%);
+  --color-destructive-foreground: hsl(210 40% 98%);
+
+  --color-border: hsl(220 20% 20%);
+  --color-input: hsl(220 20% 20%);
+  --color-ring: hsl(0 85% 55%);
+
+  --gradient-hero: linear-gradient(135deg,
+      hsl(0 85% 45%) 0%,
+      hsl(25 100% 50%) 50%,
+      hsl(45 100% 50%) 100%);
+  --gradient-card: linear-gradient(180deg,
+      hsl(220 25% 14% / 0.9) 0%,
+      hsl(220 25% 12% / 0.7) 100%);
+
+  --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+  --shadow-card-hover: 0 12px 40px -8px hsl(0 0% 0% / 0.5);
+
+  --color-sidebar-background: hsl(240 5.9% 10%);
+  --color-sidebar-foreground: hsl(240 4.8% 95.9%);
+  --color-sidebar-primary: hsl(224.3 76.3% 48%);
+  --color-sidebar-primary-foreground: hsl(0 0% 100%);
+  --color-sidebar-accent: hsl(240 3.7% 15.9%);
+  --color-sidebar-accent-foreground: hsl(240 4.8% 95.9%);
+  --color-sidebar-border: hsl(240 3.7% 15.9%);
+  --color-sidebar-ring: hsl(217.2 91.2% 59.8%);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  /* body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+  } */
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-card-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  .shadow-pokeball {
+    box-shadow: var(--shadow-pokeball);
+  }
+}
+
+@keyframes poke-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Custom Pokéball Scrollbar - Auto-hide */
+.custom-pokeball-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  transition: scrollbar-color 0.3s ease;
+}
+
+.custom-pokeball-scrollbar:hover {
+  scrollbar-color: hsl(0 85% 55%) hsl(220 25% 12%);
+}
+
+.custom-pokeball-scrollbar::-webkit-scrollbar {
+  width: 12px;
+}
+
+.custom-pokeball-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.custom-pokeball-scrollbar:hover::-webkit-scrollbar-track {
+  background: linear-gradient(180deg,
+      hsl(220 25% 15%) 0%,
+      hsl(220 25% 12%) 100%);
+  border: 1px solid hsl(220 20% 20% / 0.5);
+}
+
+/* Hide scrollbar arrows/buttons */
+.custom-pokeball-scrollbar::-webkit-scrollbar-button {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+.custom-pokeball-scrollbar::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  transition: background 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-pokeball-scrollbar:hover::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg,
+      hsl(0 85% 55%) 0%,
+      hsl(0 85% 55%) 45%,
+      hsl(220 25% 20%) 45%,
+      hsl(220 25% 20%) 55%,
+      hsl(0 0% 95%) 55%,
+      hsl(0 0% 90%) 100%);
+  border: 2px solid hsl(220 25% 18%);
+  box-shadow:
+    inset 0 2px 4px hsl(0 0% 100% / 0.2),
+    0 2px 8px hsl(0 0% 0% / 0.3);
+}
+
+.custom-pokeball-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg,
+      hsl(0 85% 60%) 0%,
+      hsl(0 85% 60%) 45%,
+      hsl(220 25% 25%) 45%,
+      hsl(220 25% 25%) 55%,
+      hsl(0 0% 100%) 55%,
+      hsl(0 0% 95%) 100%);
+  box-shadow:
+    inset 0 2px 4px hsl(0 0% 100% / 0.3),
+    0 4px 12px hsl(0 85% 50% / 0.4);
+}
+
+.custom-pokeball-scrollbar::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(180deg,
+      hsl(0 85% 50%) 0%,
+      hsl(0 85% 50%) 45%,
+      hsl(220 25% 18%) 45%,
+      hsl(220 25% 18%) 55%,
+      hsl(0 0% 85%) 55%,
+      hsl(0 0% 80%) 100%);
+}
