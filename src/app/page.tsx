@@ -11,6 +11,8 @@ import {
 } from "@/src/lib/utils";
 import { getPokemonList } from "@/src/services/pokemon/list/api";
 
+export const dynamic = "force-dynamic";
+
 export default async function Page() {
   const allPokemonData = await getPokemonList();
   const allPokemon = allPokemonData ?? [];

@@ -4,6 +4,8 @@ import PokedexClient from "@/src/components/pokedex/PokedexClient";
 import { PokemonTypeItem } from "@/src/services/pokemon/info/types";
 import { getPokedex } from "@/src/services/pokedex/api";
 
+export const dynamic = "force-dynamic";
+
 export default async function PokedexPage() {
   const { pokemon, types } = await getPokedex();
 
