@@ -137,7 +137,3 @@ Les contributions sont les bienvenues :
 Projet personnel à but éducatif. Pokémon et tous les noms associés sont des marques déposées de Nintendo, Game Freak et The Pokémon Company. Ce projet n'est pas affilié à ces entités.
 
 ---
-
-<div align="center">
-Réalisé avec ❤️ et Next.js
-</div>
